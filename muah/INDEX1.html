@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>I'm Sorry Bagucha</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      text-align: center;
+      color: #fff;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 40px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .play-btn {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(10px);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .play-btn:hover {
+      transform: scale(1.1);
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    .play-icon {
+      width: 0;
+      height: 0;
+      border-left: 18px solid white;
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+      margin-left: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>I'm Sorry Bagucha</h1>
+
+    <button class="play-btn" onclick="playAudio()">
+      <div class="play-icon"></div>
+    </button>
+
+    <audio id="loveAudio">
+      <source src="/music/my voice for you (online-audio-converter.com).mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <script>
+    function playAudio() {
+      const audio = document.getElementById("loveAudio");
+      audio.play();
+    }
+  </script>
+
+</body>
+</html>
